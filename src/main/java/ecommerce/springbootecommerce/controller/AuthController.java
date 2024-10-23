@@ -39,9 +39,7 @@ public class AuthController {
 
         public final static String HEADER_STRING="Authorization";
         public final static String TOKEN_PREFIX = "Bearer ";
-
-
-    @PostMapping("/authenticate")
+ @PostMapping("/authenticate")
 public void createAuthenticationToken( @RequestBody  AuthenticationRequest authenticationRequest,
                                        HttpServletResponse response) throws IOException, JSONException {
 

@@ -44,7 +44,7 @@ public class WebSecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)  // Disable CSRF for stateless APIs
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/authenticate", "/sign_up", "/order/**").permitAll()  // Permit public endpoints
-                        .requestMatchers("/api/**").authenticated()  // Protect API endpoints
+                        .requestMatchers("/api/auth/**").authenticated()  // Protect API endpoints
                 )
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // Use stateless session management

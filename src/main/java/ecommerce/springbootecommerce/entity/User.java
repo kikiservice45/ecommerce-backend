@@ -22,17 +22,9 @@ public class User {
 
     private String password;
 
-
-    @Getter
-    @Setter
     private String name;
 
     private UserRole role;
-
-    private Long phoneNumber;
-
-    private Instant created;
-    private boolean enabled;
 
     @Lob
     @Column(columnDefinition = "LONGBLOB")
